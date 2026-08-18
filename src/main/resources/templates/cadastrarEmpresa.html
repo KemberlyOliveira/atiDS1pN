@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Empresa</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    </head>
+<body>
+    
+    <h2>Formulário de Empresa</h2>
+
+    <form th:action="@{/empresaCTR/cadastrarEmpresa}" th:object="${empresa}" method="POST">
+        
+        <input type="hidden" th:field="*{id_empresa}" />
+
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome_empresa" th:field="*{nome_empresa}" required />
+        </div>
+        <br>
+        
+        <div>
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj_empresa" th:field="*{cnpj_empresa}" required />
+        </div>
+        <br>
+
+        <div>
+            <label for="ramo">Ramo:</label>
+            <input type="text" id="ramo_empresa" th:field="*{ramo_empresa}" required />
+        </div>
+        <br>
+
+        <button type="submit">Salvar Empresa</button>
+    </form>
+
+    <br>
+    <a th:href="@{/empresaCTR/listarTodasEmpresas}">Voltar para a Listagem de Empresa</a>
+
+</body>
+</html>

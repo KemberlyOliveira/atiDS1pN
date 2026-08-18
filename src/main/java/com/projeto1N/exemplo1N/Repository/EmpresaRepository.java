@@ -1,0 +1,11 @@
+package com.projeto1N.exemplo1N.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.projeto1N.exemplo1N.Entity.Empresa;
+
+@Repository
+public interface EmpresaRepository extends JpaRepository<Empresa, Long> {
+    
+}

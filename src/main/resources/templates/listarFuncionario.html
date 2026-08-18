@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Funcionários</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+
+<h2>Lista de Funcionários</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Nome</th>
+            <th>Cargo</th>
+            <th>Salário</th>
+            <th>Empresa</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="func : ${funcionarios}">
+            <td th:text="${func.id_funcionario}"></td>
+            <td th:text="${func.nome_funcionario}"></td>
+            <td th:text="${func.cargo_funcionario}"></td>
+            <td th:text="${func.salario_funcionario}"></td>
+            <td th:text="${func.empresaID.nome_empresa}"></td>
+            <td>
+                <a th:href="@{/funcionarioCTR/editarFunc/{id}(id=${func.id_funcionario})}">Editar</a>
+
+                <a th:href="@{'/funcionarioCTR/deletarFunc/'+${func.id_funcionario}}"
+                onclick="return confirm('Deseja realmente excluir este Funcionario?')">Excluir</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<a th:href="@{/funcionarioCTR/formCadastrar}">Cadastrar Novo Funcionário</a>
+
+</body>
+</html>

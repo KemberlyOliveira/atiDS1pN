@@ -1,0 +1,145 @@
+:root {
+    --primary-purple: #6a1b9a;
+    --light-purple: #9c27b0;
+    --pale-purple: #f3e5f5;
+    --accent-purple: #e1bee7;
+    --text-dark: #333333;
+    --white: #ffffff;
+    --shadow: 0 4px 10px rgba(106, 27, 154, 0.15);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--pale-purple);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 30px;
+    /* Detalhe temático: silhueta sutil de gato no fundo (opcional) */
+    background-image: radial-gradient(var(--accent-purple) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+h2 {
+    color: var(--primary-purple);
+    font-size: 26px;
+    border-bottom: 3px solid var(--light-purple);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: none;
+    border-bottom: 1px solid var(--accent-purple);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-purple);
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: #faf5fc;
+}
+
+/* Formulários */
+form {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    max-width: 500px;
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--primary-purple);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--accent-purple);
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--light-purple);
+    box-shadow: 0 0 5px rgba(156, 39, 176, 0.3);
+}
+
+/* Botões e Links de Ação */
+button[type="submit"],
+.btn {
+    background-color: var(--primary-purple);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--light-purple);
+    transform: translateY(-1px);
+}
+
+a {
+    color: var(--light-purple);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--primary-purple);
+    text-decoration: underline;
+}
+
+/* Estilização específica para links dentro da tabela (Editar / Excluir) */
+td a {
+    background-color: var(--pale-purple);
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-size: 13px;
+    display: inline-block;
+}
+
+td a:hover {
+    background-color: var(--accent-purple);
+    text-decoration: none;
+}
