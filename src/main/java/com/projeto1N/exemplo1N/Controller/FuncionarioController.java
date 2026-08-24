@@ -69,7 +69,7 @@ public class FuncionarioController {
     }
 
     @GetMapping ("/deletarFunc/{id}")
-    public String deletarFuncionario(@PathVariable Long id){
+    public String deletarFuncionario(@PathVariable("id") Long id){
 
         oFuncionarioService.deletarFuncionario(id);
         return "redirect:/funcionarioCTR/listarAll";

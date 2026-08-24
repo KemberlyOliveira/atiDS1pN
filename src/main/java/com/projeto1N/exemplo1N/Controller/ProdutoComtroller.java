@@ -65,10 +65,9 @@ public class ProdutoComtroller {
         oModel.addAttribute("empresas", oEmpresaService.listarEmpresas());
         return "cadastrarProduto";
     }
-
     @GetMapping("/deletarProd/{id}")
-    public String deletarProduto(@PathVariable Long id) {
-
+    public String deletarProduto(@PathVariable("id") Long id) { // <-- Adicionado "id" aqui
+    
         oProdutoService.deletarProduto(id);
         return "redirect:/produtoCTR/listarAll";
     }
