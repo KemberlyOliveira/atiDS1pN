@@ -11,4 +11,13 @@ public class Exemplo1NApplication {
 	}
 
 }
+
+
+
+
+// mvn spring-boot:run         para iniciar o codigo via terminal
+// mvn clean install -U        coloca no terminal depois de botar uma dependencia
+
+// Missoes
+
 //  mvn spring-boot:run
